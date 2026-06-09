@@ -1,7 +1,7 @@
 import netgame as ng
 
 def main():
-    print(ng.__version__)
+    print(ng)
 
 
 if __name__ == "__main__":
