@@ -1,3 +1,5 @@
+from .environment import Environment
+from .game import Game
 from .player import Attacker, Builder, Defender, Operator, Player, User
 
 
@@ -12,4 +14,6 @@ __all__ = [
     "Builder",
     "Operator",
     "User",
+    "Environment",
+    "Game",
 ]

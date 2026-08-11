@@ -47,5 +47,19 @@
     20,
     null
   ],
-  "steps": 21
+  "steps": 21,
+  "players": [
+    {
+      "name": "Engineer",
+      "role": "Defender",
+      "capacity": 150,
+      "resources": 50
+    },
+    {
+      "name": "Storm",
+      "role": "Attacker",
+      "capacity": 120,
+      "resources": 40
+    }
+  ]
 }
