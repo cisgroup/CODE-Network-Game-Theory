@@ -12,5 +12,4 @@ __all__ = [
     "Builder",
     "Operator",
     "User",
-    "hello",
 ]
