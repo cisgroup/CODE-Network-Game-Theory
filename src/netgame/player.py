@@ -2,11 +2,12 @@ from __future__ import annotations
 
 
 class Player:
-    def __init__(self, name: str, capacity: int = 100, resources: int = 0, role: str = "Player"):
+    def __init__(self, name: str, capacity: int = 100, resources: int = 0, role: str = "Player", knowledge: int = 100):
         self.name = name
         self.capacity = capacity
         self.resources = resources
         self.role = role
+        self.knowledge = knowledge
 
     def act(self) -> str:
         return f"{self.name} is ready to play as a {self.role}."
@@ -17,15 +18,16 @@ class Player:
             "role": self.role,
             "capacity": self.capacity,
             "resources": self.resources,
+            "knowledge": self.knowledge,
         }
 
     def __str__(self) -> str:
-        return f"I am the {self.role}(name={self.name} at {self.capacity} capacity and {self.resources} resources)"
+        return f"I am {self.name}, the {self.role}, with {self.knowledge} knowledge at {self.capacity} capacity and {self.resources} resources."
 
 
 class Attacker(Player):
-    def __init__(self, name: str, capacity: int = 100, resources: int = 0, attack_power: int = 25):
-        super().__init__(name, capacity, resources, role="Attacker")
+    def __init__(self, name: str, capacity: int = 100, resources: int = 0, knowledge: int = 0, attack_power: int = 25):
+        super().__init__(name, capacity, resources, role="Attacker", knowledge=knowledge)
         self.attack_power = attack_power
 
     def act(self) -> str:
@@ -33,8 +35,8 @@ class Attacker(Player):
 
 
 class Defender(Player):
-    def __init__(self, name: str, capacity: int = 100, resources: int = 0, defense_power: int = 25):
-        super().__init__(name, capacity, resources, role="Defender")
+    def __init__(self, name: str, capacity: int = 100, resources: int = 0, knowledge: int = 100, defense_power: int = 25):
+        super().__init__(name, capacity, resources, role="Defender", knowledge=knowledge)
         self.defense_power = defense_power
 
     def act(self) -> str:
@@ -42,8 +44,8 @@ class Defender(Player):
 
 
 class Builder(Player):
-    def __init__(self, name: str, capacity: int = 100, resources: int = 0, build_speed: int = 10):
-        super().__init__(name, capacity, resources, role="Builder")
+    def __init__(self, name: str, capacity: int = 100, resources: int = 0, knowledge: int = 100, build_speed: int = 10):
+        super().__init__(name, capacity, resources, role="Builder", knowledge=knowledge)
         self.build_speed = build_speed
 
     def act(self) -> str:
@@ -51,8 +53,8 @@ class Builder(Player):
 
 
 class Operator(Player):
-    def __init__(self, name: str, capacity: int = 100, resources: int = 0, control_level: int = 10):
-        super().__init__(name, capacity, resources, role="Operator")
+    def __init__(self, name: str, capacity: int = 100, resources: int = 0, knowledge: int = 100, control_level: int = 10):
+        super().__init__(name, capacity, resources, role="Operator", knowledge=knowledge)
         self.control_level = control_level
 
     def act(self) -> str:
@@ -60,8 +62,8 @@ class Operator(Player):
 
 
 class User(Player):
-    def __init__(self, name: str, capacity: int = 100, resources: int = 0, experience: int = 5):
-        super().__init__(name, capacity, resources, role="User")
+    def __init__(self, name: str, capacity: int = 100, resources: int = 0, knowledge: int = 100, experience: int = 5):
+        super().__init__(name, capacity, resources, role="User", knowledge=knowledge)
         self.experience = experience
 
     def act(self) -> str:

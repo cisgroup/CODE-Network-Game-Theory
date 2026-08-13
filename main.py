@@ -5,9 +5,9 @@ from netgame import Attacker, Defender, Environment, Game
 
 
 def run_game(seed: int | None = 42) -> dict[str, Any]:
-    environment = Environment(name="Roads", capacity=200, resources=100, size=(5, 5))
-    defender = Defender(name="Engineer", capacity=150, resources=50, defense_power=30)
-    attacker = Attacker(name="Storm", capacity=120, resources=40, attack_power=35)
+    environment = Environment(name="Lattice Grid", capacity=200, resources=100, size=(5, 5), source = None, source_type = "test")
+    defender = Defender(name="Engineer", capacity=150, resources=50, knowledge = 100, defense_power=30)
+    attacker = Attacker(name="Storm", capacity=120, resources=40, knowledge = 0, attack_power=35)
     game = Game(environment=environment, defender=defender, attacker=attacker, seed=seed)
     return game.run()
 
