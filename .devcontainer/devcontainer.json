@@ -13,6 +13,7 @@
                 "ms-python.python",
                 "ms-toolsai.jupyter",
                 "google.google-antigravity"
+                "anthropic.claude-code"
             ],
             "settings": {
                 "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
