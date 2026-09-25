@@ -1,6 +1,6 @@
 {
     "name": "NetGame",
-    "image": "ghcr.io/cisgroup/NetGame",
+    "image": "ghcr.io/NetGame",
     "init": true,
     "remoteUser": "student",
     "customizations": {
