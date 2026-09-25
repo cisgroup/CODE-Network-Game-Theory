@@ -1,0 +1,5 @@
+
+  Hello from NetGame!
+  The environment is running.
+
+
